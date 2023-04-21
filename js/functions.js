@@ -20,7 +20,7 @@ export function createElement (tagName) {
     return element;
 }
 
-let slideIndex = 1;
+export let slideIndex = 1;
 
 export function showSlides (index) {
     let slideImages = document.querySelectorAll(".slider__img");

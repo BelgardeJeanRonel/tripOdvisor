@@ -1,4 +1,4 @@
-import { createElement, eventClickMode, eventClickThemeColor, plusSlides, showSlides } from "./functions.js";
+import { createElement, eventClickMode, eventClickThemeColor, plusSlides, showSlides, slideIndex } from "./functions.js";
 
 const themeSwitch = document.querySelector("#theme-switch");
 const body = document.querySelector("body");
@@ -38,14 +38,12 @@ const sliderSection = document.querySelector(".slider");
 
 for (const image of sliderImages) {
     const img = createElement("img");
-    img.src = "../img/" + image;
+    img.src = "img/" + image;
     img.classList.add("slider__img");
 
     sliderSection.append(img);
     
 }
-
-let slideIndex = 1;
 
 showSlides(slideIndex);
 
