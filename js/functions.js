@@ -1,9 +1,3 @@
-export function eventClickMode (themeName, body, classe) {
-    themeName.addEventListener("click", function (){
-        body.classList.toggle(classe);
-    })
-}
-
 export function eventClickThemeColor (themeName, body, classThemePrimary, classthemeSecondary1, classthemeSecondary2, img, source) {
     themeName.addEventListener("click", function(){
         body.classList.add(classThemePrimary);
