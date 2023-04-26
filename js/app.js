@@ -1,32 +1,12 @@
-import { createElement, eventClickThemeColor, plusSlides, showSlides, slideIndex } from "./functions.js";
+import { createElement, plusSlides, showSlides, slideIndex } from "./functions.js";
+import { themeColor, themeMode } from "./theme.js";
 
 // CHANGER DE THEME
 
-const themeSwitch = document.querySelector("#theme-switch");
-const body = document.querySelector("body");
 
-themeSwitch.addEventListener("click", function (){
-    body.classList.toggle("theme-dark");
-})
+document.addEventListener("DOMContentLoaded", themeMode.init);
 
-const img = document.querySelector(".logo__image");
-
-const logoImages = [
-    "logo-theme-green.png",
-    "logo-theme-red.png",
-    "logo-theme-blue.png"
-]
-
-
-const themeGreen = document.querySelector("#theme-green");
-eventClickThemeColor(themeGreen, body, "theme-green", "theme-red", "theme-blue", img, logoImages[0]);
-
-const themeRed = document.querySelector("#theme-red");
-eventClickThemeColor(themeRed, body, "theme-red", "theme-green", "theme-blue", img, logoImages[1]);
-
-const themeBlue = document.querySelector("#theme-blue");
-eventClickThemeColor(themeBlue, body, "theme-blue", "theme-green", "theme-red", img, logoImages[2]);
-
+document.addEventListener("DOMContentLoaded", themeColor.init);
 
 
 // SLIDER
@@ -123,6 +103,10 @@ spanErrorEmail.textContent = "Email incorrect!";
 spanErrorEmail.style.cssText = `color: red;
     display: none;
     margin-top: 10px;
+    border: 1px solid gray;
+    padding: .5em 2em;
+    background: wheat;
+    border-radius: 5px;
 `;
 formNewsLetter.append(spanErrorEmail);
 
