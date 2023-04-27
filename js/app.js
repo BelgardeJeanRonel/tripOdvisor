@@ -1,5 +1,5 @@
 import { createElement, plusSlides, showSlides, slideIndex } from "./functions.js";
-import { themeColor, themeMode } from "./theme.js";
+import { themeMode, themeColor } from "./theme.js";
 
 // CHANGER DE THEME
 
